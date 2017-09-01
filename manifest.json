@@ -1,0 +1,24 @@
+﻿{
+    "manifest_version": 2,
+    "name": "去看视频",
+    "description":"可以看爱奇艺的VIP视频",
+    "version": "1.0",
+    "browser_action":
+    {
+        "default_icon": "icon/icon32.png",
+        "default_popup": "popup.html"
+    },
+    "icons":{
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png"
+    },
+    "permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["https://*.iqiyi.com/*","https://*.baidu.com/*"],
+        "js": ["js/jquery-3.2.1.min.js","js/main.js"]
+    }]
+}
